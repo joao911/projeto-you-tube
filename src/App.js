@@ -1,24 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import SearchBar from './componente/SearchBar'
+import VideoList from './componente/VideoList'
+import VideoPlayer from './componente/VideoPlayer'
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <SearchBar/>
+      <VideoList/>
+      <VideoPlayer/>
     </div>
   );
 }

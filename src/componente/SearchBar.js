@@ -6,6 +6,12 @@ import busca from '../store/reducers/busca';
 import {buscaVideo} from '../store/actions/busca-video'
 
 class SearchBar extends Component {
+    constructor(props){
+        super(props)
+
+        //on load este vai aparecer qndo iniciar a aplicação
+        this.props.buscaVideo('sertanejo 2020')
+    }
 
     pesquisaTermo = e => {
 
@@ -23,9 +29,10 @@ class SearchBar extends Component {
                 <Segment stacked>
                     <Input icon='search'
                         onKeyDown={(e) => this.pesquisaTermo(e)}
-                        size='lage'
+                        size='large'
                         placeholder='pesquise seu video' />
                 </Segment>
+                
             </div>
         )
     }
